@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import profileImage from '../../../image.png';
 
 export const Navbar = () => {
   const { language, toggleLanguage, t } = useLanguage();
@@ -83,6 +84,13 @@ export const Navbar = () => {
             >
               <Github size={20} />
             </a>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="ml-2 rounded-full overflow-hidden border-2 border-primary/20 hover:scale-105 transition-transform"
+              title="Contact"
+            >
+              <img src={profileImage} alt="Ashok avatar" className="w-10 h-10 object-cover" />
+            </button>
           </div>
         </div>
       </div>

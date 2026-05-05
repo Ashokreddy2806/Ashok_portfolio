@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useEffect, useState } from 'react';
 import { Mail, Github, Linkedin, ArrowDown } from 'lucide-react';
+import profileImage from '../../../image.png';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -113,10 +114,15 @@ export const Hero = () => {
         </div>
 
         <div className="hidden md:flex items-center justify-center animate-in fade-in slide-in-from-right-8 duration-1000">
-          <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl border-2 border-primary/30 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-6xl mb-4">👨‍💻</div>
-              <p className="text-sm text-muted-foreground">AI/ML Engineer</p>
+          <div className="relative w-80 h-80 rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/20 to-primary/5 p-4 shadow-xl shadow-primary/10">
+            <div className="absolute inset-0 rounded-2xl border border-white/40" />
+            <img
+              src={profileImage}
+              alt="Ashok Reddy portrait"
+              className="relative z-10 h-full w-full rounded-xl object-cover object-center"
+            />
+            <div className="absolute bottom-4 left-4 z-20 rounded-full border border-primary/20 bg-background/90 px-4 py-1 text-sm font-semibold text-primary backdrop-blur">
+              AI/ML Engineer
             </div>
           </div>
         </div>
